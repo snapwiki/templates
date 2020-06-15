@@ -1,60 +1,97 @@
-<div
-  class="box"
-  style="
-    width: {{{Width (Percent)|100%}}};
-    height: {{{Height}}};
-    float: {{{Float}}};
-    overflow: hidden;
-    margin-bottom: {{#if:{{{8|}}}|0|20px}};
-    display: inline-block;
-    border: 1px solid #d9d9d9;
-    border-radius: 1px 1x 0 0;
-    background-color: #fff;
-    {{#if:{{{8|}}}|
-      position: fixed; {{{8}}}<!--if 8th parameter, add it to fixed positioning-->
-     }}
-  "
->
-  <div
-    class="box-header"
-    style="
-      text-align: center;
-      font-size: 1.5em;
-      display: block;
-      clear: both;
-      margin: 0;
-      border-top: 1px solid #fff;
-      border-bottom: 1px solid #d9d9d9;
-      border-radius: 1px 1px 0 0;
-      background-color: #f2f2f2;
-      padding: 8px 20px;
-      overflow: hidden;
-    "
-  >
-    <span>
-      {{#if: {{{Link|}}} |
-        [[{{{Link}}}|{{{Box Title}}}]] |
-        {{{Box Title}}}
-      }}
-    </span><!--If 7th parameter exists, make the title a link.-->
-    {{#if:{{{collapse|}}}|
-      <span style="font-size: 1rem; float: right">[<span style="color: #4d97ff" class="mw-customtoggle-{{{collapseid}}}">show/hide</span>]</span>
-    }}
-  </div>
-  <div
-    {{#if:{{{collapse|}}}|
-      id="mw-customcollapsible-{{{collapseid}}}" class|
-      class
-    }}="
-      {{#if:{{{collapse|}}}|box-content {{{collapse}}} mw-collapsible|box-content}}
-    " style="
-      padding: 5px;
-      display: block;
-      clear: both;
-      background-color: #fff;
-      font-size: 13px;
-    "
-  ><!--
-   -->{{{Page To Show}}}
-  </div>
-</div>
+<div class="box" style="
+width: {{{Width (Percent)|100%}}};
+height: {{{Height}}};
+float: {{{Float}}};
+overflow: hidden;
+margin-bottom: {{#if:{{{8|}}}|0|20px}};
+display: inline-block;
+border: 1px solid #d9d9d9;
+border-radius: 1px 1x 0 0;
+background-color: #fff;
+{{#if:{{{8|}}}|position: fixed;
+{{{8}}}<!--if 8th parameter, add it to fixed positioning-->}}
+"><div class="box-header" style="
+text-align: center;
+font-size: 1.5em;
+display: block;
+clear: both;
+margin: 0;
+border-top: 1px solid #fff;
+border-bottom: 1px solid #d9d9d9;
+border-radius: 1px 1px 0 0;
+background-color: #f2f2f2;
+padding: 8px 20px;
+overflow: hidden;
+"><span>{{#if: {{{Link|}}} | [[{{{Link}}}|{{{Box Title}}}]] | {{{Box Title}}} }}</span><!--If 7th parameter exists, make the title a link.-->{{#if:{{{collapse|}}}|<span style="font-size: 1rem; float: right">[<span style="color: #4d97ff" class="mw-customtoggle-{{{collapseid}}}">show/hide</span>]</span>}}
+</div><div {{#if:{{{collapse|}}}|id="mw-customcollapsible-{{{collapseid}}}" class|class}}="{{#if:{{{collapse|}}}|box-content {{{collapse}}} mw-collapsible|box-content}}" style="
+padding: 5px;
+display: block;
+clear: both;
+background-color: #fff;
+font-size: 13px;
+"><!--
+-->{{{Page To Show}}}
+</div></div>
+<noinclude>{{/doc}}[[Category:Templates]<templatedata>
+{
+	"params": {
+		"collapse": {},
+		"collapseid": {},
+		"Box Title": {
+			"required": true,
+			"aliases": [
+				"{{{1}}}"
+			]
+		},
+		"Page To Show": {
+			"example": "{{:Main Page/Wiki_News}}",
+			"required": true,
+			"aliases": [
+				"{{{Page To Show}}}"
+			]
+		},
+		"Width (Percent)": {
+			"required": true,
+			"aliases": [
+				"{{{3}}}"
+			]
+		},
+		"Height": {
+			"default": "auto",
+			"required": true,
+			"aliases": [
+				"{{{4}}}"
+			]
+		},
+		"Float": {
+			"required": true,
+			"aliases": [
+				"{{{5}}}"
+			]
+		},
+		"Bottom Margin (px)": {
+			"default": "20px",
+			"required": true,
+			"aliases": [
+				"{{{6}}"
+			]
+		},
+		"Link": {
+			"aliases": [
+				"{{{7}}}"
+			]
+		}
+	},
+	"paramOrder": [
+		"Box Title",
+		"Page To Show",
+		"Width (Percent)",
+		"Height",
+		"Float",
+		"Bottom Margin (px)",
+		"Link",
+		"collapse",
+		"collapseid"
+	]
+}
+</templatedata>]</noinclude>
