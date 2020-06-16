@@ -7,4 +7,4 @@ Templates used in the wiki (well documented and commented 😉)
 
 ## Documentation
 
-See the [wiki[(https://github.com/snapwiki/templates/wiki)
+See the [wiki](https://github.com/snapwiki/templates/wiki)
